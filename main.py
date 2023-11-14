@@ -1,4 +1,3 @@
-
 import argparse
 import io
 import json
@@ -99,8 +98,8 @@ def main():
 
 
     model = TDAR(
-            edge_index, num_nodes, num_features, num_classes, args.hidden_size, eps, alpha, num_iter,
-            lamda, lambda_penalty, args.threshold, args.layers, args.conv, args.dropout,
+            edge_index, num_nodes, num_features, num_classes, args.hidden_size, args.eps, args.alpha, args.num_iter,
+            args.lamda, args.lambda_penalty, args.threshold, args.layers, args.conv, args.dropout,
             args.x_type, args.x_loss, args.emb_norm, trn_nodes, missing_nodes, x_features,fp_features,
             args.dec_bias)
 
@@ -299,11 +298,11 @@ if __name__ == '__main__':
     # for lamda in [0.01,0.05,0.1,0.5,1,5,10]:
     #     for lambda_penalty in [0.01,0.05,0.1,0.5,1,5,10]:
     #         main()
-    lamda= 0.05
-    lambda_penalty = 0.1
-    eps=0.01
-    alpha=0.9
-    num_iter = 30
+    # lamda= 0.05
+    # lambda_penalty = 0.1
+    # eps=0.01
+    # alpha=0.9
+    # num_iter = 30
     #for num_iter in [1,5,10,20,30,50,100,200]:
     #for eps in [10,1,0.1,0.01,0.001]:
     #for alpha in [0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9]:
