@@ -47,10 +47,11 @@ def parse_args():
     parser.add_argument('--out', type=str, default='../out')
 
     parser.add_argument('--lr', type=float, default=1e-3) #photo computers 1e-2; cora citeseer 1e-3 
-
-
-    parser.add_argument('--lamda', type=float, default=1)
-    parser.add_argument('--lambda_penalty', type=float, default=0.8)
+    parser.add_argument('--lamda', type=float, default=0.1)
+    parser.add_argument('--lambda_penalty', type=float, default=0.1)
+    parser.add_argument('--eps', type=float, default=0.01)
+    parser.add_argument('--alpha', type=float, default=0.9)
+    parser.add_argument('--num_iter', type=float, default=30)
     parser.add_argument('--threshold', type=float, default=0.2)
 
     parser.add_argument('--emb-norm', type=str, default='unit')
