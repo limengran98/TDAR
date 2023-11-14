@@ -1,16 +1,3 @@
-"""
-Accurate Node Feature Estimation with Structured Variational Graph Autoencoder
-(KDD 2022)
-
-Authors:
-- Jaemin Yoo (jaeminyoo@cmu.edu), Carnegie Mellon University
-- Hyunsik Jeon (jeon185@snu.ac.kr), Seoul National University
-- Jinhong Jung (jinhongjung@jbnu.ac.kr), Jeonbuk National University
-- U Kang (ukang@snu.ac.kr), Seoul National University
-
-This software may be used only for research evaluation purposes.
-For other purposes (e.g., commercial), please contact the authors.
-"""
 import os
 from argparse import Namespace
 from collections import defaultdict
