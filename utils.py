@@ -1,7 +1,7 @@
-
 import argparse
-
+from data import load_data, is_continuous
 import torch
+import torch.nn as nn
 import numpy as np
 from munkres import Munkres, print_matrix
 from sklearn.metrics.cluster import normalized_mutual_info_score as nmi_score
