@@ -171,11 +171,6 @@ def main():
         if not args.silent and epoch % (args.epochs // min(args.epochs, 20)) == 0:
             print_log(*curr_result)
 
-        if args.save:
-            trn_res = evaluate_last(args.data, model, edge_index, trn_nodes, x_all)
-            test_res = evaluate_last(args.data, model, edge_index, test_nodes, x_all)
-            logs.append([epoch, *trn_res, *test_res])
-
         if args.patience > 0 and epoch >= best_epoch + args.patience:
             break
 
