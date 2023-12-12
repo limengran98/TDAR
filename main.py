@@ -208,8 +208,13 @@ def main():
         f'F1: {f1_:.4f}')
 
 ## classification
-    x_hat = x_hat[missing_nodes].to(device)
-    y_all = y_all[missing_nodes]
+    combined_nodes = torch.cat((val_nodes, test_nodes))
+    sorted_nodes = torch.sort(combined_nodes, descending=True).values
+    x_hat = x_hat[sorted_nodes].to(device)
+    y_all = y_all[sorted_nodes]
+
+    edge_index, _ = subgraph(sorted_nodes.to(device), edge_index, relabel_nodes=True)
+    edge_index = edge_index.to(device)
 
     def train(feature, edge_index, y_all, train_idx):
         cl_model.train()
