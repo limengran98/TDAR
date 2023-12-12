@@ -208,10 +208,8 @@ def main():
         f'F1: {f1_:.4f}')
 
 ## classification
-    combined_nodes = torch.cat((val_nodes, test_nodes))
-    sorted_nodes = torch.sort(combined_nodes, descending=True).values
-    x_hat = x_hat[sorted_nodes].to(device)
-    y_all = y_all[sorted_nodes]
+    x_hat = x_hat[missing_nodes].to(device)
+    y_all = y_all[missing_nodes]
 
     edge_index, _ = subgraph(sorted_nodes.to(device), edge_index, relabel_nodes=True)
     edge_index = edge_index.to(device)
