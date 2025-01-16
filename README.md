@@ -1,5 +1,5 @@
 # TDAR
-This repo is for source code of paper "TDAR: Topology-Driven Attribute Recovery for Attribute-missing Graph Learning". This code is referenced from [SVGA](https://github.com/snudatalab/SVGA) and [SAT](https://github.com/xuChenSJTU/SAT-master-online), thanks to the author's contribution.
+This repo is for source code of paper "Topology-Driven Attribute Recovery for Attribute Missing Graph Learning in Social Internet of Things". This code is referenced from [SVGA](https://github.com/snudatalab/SVGA) and [SAT](https://github.com/xuChenSJTU/SAT-master-online), thanks to the author's contribution.
 
 ## Environment Settings
 > python==3.11.4 \
